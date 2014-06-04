@@ -1,0 +1,19 @@
+{
+  "name": "spotify-previewbutton",
+  "version": "0.0.0",
+  "description": "Polymer Web component to preview Spotify tracks",
+  "dependencies": {
+    "polymer": "~0.2.3"
+  },
+  "authors": [
+    "Rafael de Oleza"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "spotify",
+    "music"
+  ]
+}

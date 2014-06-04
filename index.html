@@ -1,0 +1,33 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="spotify-previewbutton" attributes="uri">
+  <template>
+    <link rel="stylesheet" href="style.css"/>
+
+    <div class="header">
+      <div class="play {{ playing ? 'playing' : '' }}" on-click="{{ togglePlay }}"></div>
+
+      <div class="metadata">
+        <p class="title">{{ songTitle }}</p>
+        <p class="author">{{ author }}</p>
+
+        <div class="seekbar">
+          <progress value="{{ currentTime }}" max="{{ duration }}"></progress>
+        </div>
+      </div>
+    </div>
+    <div class="cover">
+      <img src="{{ cover }}" on-load="{{ onImageLoaded }}"/>
+    </div>
+
+    <audio id="audio" src="{{ audio }}"
+      on-play="{{ onPlayChange }}"
+      on-pause="{{ onPlayChange }}"
+      on-timeupdate="{{ onPlayProgress }}">
+    </audio>
+
+    <div class="loading {{ loading ? 'visible' : ''}}"></div>
+  </template>
+
+  <script type="text/javascript" src="main.js"></script>
+</polymer-element>

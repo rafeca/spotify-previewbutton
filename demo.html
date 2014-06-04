@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>spotify preview button demo</title>
+
+    <script type="text/javascript" src="../platform/platform.js"></script>
+
+    <link rel="import" href="index.html">
+
+    <style>
+      body {
+        background-color: #3c3c3c;
+        color: #ccc;
+        font-family: Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Spotify Preview button demo</h1>
+
+    <p><form><input type="text" placeholder="Enter a spotify track URI here"><button type="submit">Load!</button></form></p>
+    <p><button value="spotify:track:57fkSJ5DWQN73Fzj7lIILS">La vie en Rose</button></p>
+    <p><button value="spotify:track:2WMqnU9LDhBBJ5m5Rs0ZYT">Glaub Mir Doch</button></p>
+    <p><button value="spotify:track:2wjVSAhv8Oe6a1eGGBnsiY">Fat Papa</button></p>
+
+    <spotify-previewbutton uri="spotify:track:6zlOUIqcU6juXFww9UNpJK"></spotify-previewbutton>
+
+    <script type="text/javascript">
+      'use strict';
+
+      var previewButton = document.querySelector('spotify-previewbutton');
+
+      document.querySelector('input').addEventListener('change', function (evt) {
+        previewButton.uri = evt.target.value;
+      });
+
+      var buttons = document.querySelectorAll('button');
+
+      [].slice.call(buttons).forEach(function(button) {
+        button.addEventListener('click', function (evt) {
+          previewButton.uri = evt.target.value;
+        });
+      });
+    </script>
+  </body>
+</html>
