@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>spotify-previewbutton by rafeca</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>spotify-previewbutton</h1>
+        <p>Polymer Web component to preview Spotify tracks</p>
+
+        <p class="view"><a href="https://github.com/rafeca/spotify-previewbutton">View the Project on GitHub <small>rafeca/spotify-previewbutton</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/rafeca/spotify-previewbutton/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/rafeca/spotify-previewbutton/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/rafeca/spotify-previewbutton">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="spotify-polymer-element" class="anchor" href="#spotify-polymer-element"><span class="octicon octicon-link"></span></a>Spotify Polymer Element</h1>
+
+<p>This is an example of a <a href="www.polymer-project.org">Polymer Web Component</a> that implements
+a simple widget for previewing Spotify tracks.</p>
+
+<p>It uses the new <a href="https://developer.spotify.com/spotify-web-api/">Spotify Web API</a>
+to get the track metadata, cover art and the preview MP3 file.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>You just need to include the polymer platform and this element in the head of
+your html page.</p>
+
+<p>Then, you can start using the <code>spotify-previewButton</code> element as any other HTML element
+in your page:</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"bower_components/platform/platform.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"import"</span> <span class="na">href=</span><span class="s">"bower_components/spotify-previewButton/index.html"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;spotify-previewButton</span> <span class="na">uri=</span><span class="s">"spotify:track:0eGsygTp906u18L0Oimnem"</span><span class="nt">&gt;&lt;/spotify-previewButton&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+
+<h2>
+<a name="trying-the-example" class="anchor" href="#trying-the-example"><span class="octicon octicon-link"></span></a>Trying the example</h2>
+
+<p>To launch the example, you can launch an HTTP server in the project root folder:</p>
+
+<div class="highlight highlight-sh"><pre><span class="nv">$ </span>ruby -run -e httpd . -p <span class="m">5000</span> <span class="c"># "python -m SimpleHTTPServer 5000" will also do the trick</span>
+</pre></div>
+
+<p>Then, you only need to navigate to http://localhost:5000/demo.html with any modern browser</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/rafeca">rafeca</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-6212472-4");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
