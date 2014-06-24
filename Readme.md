@@ -26,3 +26,20 @@ in your page:
 </body>
 </script>
 ```
+
+## Running the example
+
+To launch the example, install the `spotify-previewbutton` bower component:
+
+```sh
+$ bower install spotify-previewbutton
+```
+
+Then launch a web server:
+
+```sh
+$ ruby -run -e httpd . -p 5000 # "python -m SimpleHTTPServer 5000" will also do the trick
+```
+
+Then, you only need to navigate to http://localhost:5000/bower_components/spotify-playbutton/demo.html
+from any modern browser.
