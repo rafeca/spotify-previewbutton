@@ -7,6 +7,11 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+
+    <script type="text/javascript" src="bower_components/platform/platform.js"></script>
+    <link rel="import" href="bower_components/spotify-previewbutton/index.html">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,12 +25,37 @@
 
         <p class="view"><a href="https://github.com/rafeca/spotify-previewbutton">View the Project on GitHub <small>rafeca/spotify-previewbutton</small></a></p>
 
+        <h3>Click on the links below to load different tracks</h3>
 
         <ul>
-          <li><a href="https://github.com/rafeca/spotify-previewbutton/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/rafeca/spotify-previewbutton/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/rafeca/spotify-previewbutton">View On <strong>GitHub</strong></a></li>
+          <li><a href="spotify:track:57fkSJ5DWQN73Fzj7lIILS">La vie en Rose<strong>Play</strong></a></li>
+          <li><a href="spotify:track:2WMqnU9LDhBBJ5m5Rs0ZYT">Glaub Mir Doch<strong>Play</strong></a></li>
+          <li><a href="spotify:track:2wjVSAhv8Oe6a1eGGBnsiY">Fat Papa<strong>Play</strong></a></li>
         </ul>
+
+        <spotify-previewButton uri="spotify:track:6zlOUIqcU6juXFww9UNpJK"></spotify-previewButton>
+
+        <script type="text/javascript">
+          'use strict';
+
+          var previewButton = document.querySelector('spotify-previewbutton');
+          var buttons = document.querySelectorAll('header ul a');
+
+          var getTrackFromLink = function (element) {
+            if (element.nodeName !== 'A') {
+              return getTrackFromLink(element.parentNode);
+            }
+            return element.href;
+          };
+
+          [].slice.call(buttons).forEach(function(button) {
+            button.addEventListener('click', function (evt) {
+              evt.preventDefault();
+              previewButton.uri = getTrackFromLink(evt.target);
+            });
+          });
+        </script>
+
       </header>
       <section>
         <h1>
@@ -74,10 +104,6 @@ in your page:</p>
 <p>Then, you only need to navigate to http://localhost:5000/bower_components/spotify-playbutton/demo.html
 from any modern browser.</p>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/rafeca">rafeca</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
               <script type="text/javascript">
