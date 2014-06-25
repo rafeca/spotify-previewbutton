@@ -41,5 +41,4 @@ Then launch a web server:
 $ ruby -run -e httpd . -p 5000 # "python -m SimpleHTTPServer 5000" will also do the trick
 ```
 
-Then, you only need to navigate to http://localhost:5000/bower_components/spotify-playbutton/demo.html
-from any modern browser.
+Then, you only need to navigate to [http://localhost:5000/bower_components/spotify-previewButton/demo.html]() from any modern browser.
