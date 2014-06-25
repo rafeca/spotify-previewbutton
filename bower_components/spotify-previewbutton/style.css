@@ -2,13 +2,14 @@
   display: block;
   font-size: 20pt;
   font-size: 18px;
-  width: 300px;
   background-color: #000;
   border-radius: 5px;
   overflow: hidden;
   color: #fff;
   border: 1px solid #000;
   position: relative;
+  max-width: 500px;
+  min-width: 200px;
 }
 
 .header {
@@ -87,7 +88,6 @@
 .title, .author {
   overflow: hidden;
   text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
   white-space: nowrap;
   text-shadow: #000 0 1px 1px;
   margin: 0;
@@ -106,11 +106,12 @@
 }
 
 .cover {
-  height: 300px;
 }
 
 img {
+  height: auto;
   width: 100%;
+  display: block;
 }
 
 audio {
