@@ -12,9 +12,7 @@
         <p class="title">{{ songTitle }}</p>
         <p class="author">{{ author }}</p>
 
-        <div class="seekbar">
-          <spotify-progressbar value="{{ currentTime }}" max="{{ duration }}" on-change="{{ onProgressChanged }}"></spotify-progressbar>
-        </div>
+        <spotify-progressbar value="{{ currentTime }}" max="{{ duration }}" on-change="{{ onProgressChanged }}"></spotify-progressbar>
       </div>
     </div>
     <div class="cover">
