@@ -1,4 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../spotify-progressbar/index.html">
 
 <polymer-element name="spotify-previewbutton" attributes="uri">
   <template>
@@ -12,7 +13,7 @@
         <p class="author">{{ author }}</p>
 
         <div class="seekbar">
-          <progress value="{{ currentTime }}" max="{{ duration }}"></progress>
+          <spotify-progressbar value="{{ currentTime }}" max="{{ duration }}" on-change="{{ onProgressChanged }}"></spotify-progressbar>
         </div>
       </div>
     </div>

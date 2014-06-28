@@ -23,6 +23,7 @@
         this.cover = data.album.images[1].url;
         this.audio = data.preview_url;
         this.currentTime = 0;
+        this.duration = 30;
       }.bind(this));
     },
 
@@ -46,6 +47,10 @@
 
     onImageLoaded: function () {
       this.loading = false;
+    },
+
+    onProgressChanged: function (e, detail) {
+      this.$.audio.currentTime = detail;
     }
   });
 
