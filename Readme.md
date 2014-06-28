@@ -11,7 +11,7 @@ to get the track metadata, cover art and the preview MP3 file.
 You just need to include the polymer platform and this element in the head of
 your html page.
 
-Then, you can start using the `spotify-previewButton` element as any other HTML element
+Then, you can start using the `spotify-previewbutton` element as any other HTML element
 in your page:
 
 ```html
@@ -19,10 +19,10 @@ in your page:
 <head>
   <script type="text/javascript" src="bower_components/platform/platform.js"></script>
 
-  <link rel="import" href="bower_components/spotify-previewButton/index.html">
+  <link rel="import" href="bower_components/spotify-previewbutton/index.html">
 </head>
 <body>
-  <spotify-previewButton uri="spotify:track:0eGsygTp906u18L0Oimnem"></spotify-previewButton>
+  <spotify-previewbutton uri="spotify:track:0eGsygTp906u18L0Oimnem"></spotify-previewbutton>
 </body>
 </script>
 ```
@@ -41,4 +41,4 @@ Then launch a web server:
 $ ruby -run -e httpd . -p 5000 # "python -m SimpleHTTPServer 5000" will also do the trick
 ```
 
-Then, you only need to navigate to [http://localhost:5000/bower_components/spotify-previewButton/demo.html](http://localhost:5000/bower_components/spotify-previewButton/demo.html) from any modern browser.
+Then, you only need to navigate to [http://localhost:5000/bower_components/spotify-previewbutton/demo.html](http://localhost:5000/bower_components/spotify-previewbutton/demo.html) from any modern browser.
