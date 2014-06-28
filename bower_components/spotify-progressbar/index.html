@@ -1,0 +1,15 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="spotify-progressbar" attributes="value max">
+  <template>
+    <link rel="stylesheet" href="style.css"/>
+
+    <div class="progressbar" on-click="{{ onClick }}">
+      <div class="bar" style="width: {{ value / max * 100 }}%;">
+        <div class="slider">
+        </div>
+    </div>
+  </template>
+
+  <script type="text/javascript" src="main.js"></script>
+</polymer-element>
