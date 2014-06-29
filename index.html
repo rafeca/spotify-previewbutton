@@ -13,13 +13,18 @@
         <p class="title">{{ songTitle }}</p>
         <p class="author">{{ author }}</p>
 
-        <spotify-progressbar value="{{ currentTime }}" max="{{ duration }}" on-change="{{ onProgressChanged }}"></spotify-progressbar>
+        <spotify-progressbar
+          value="{{ currentTime }}"
+          max="{{ duration }}"
+          on-change="{{ onProgressChanged }}">
+        </spotify-progressbar>
       </div>
     </div>
 
     <spotify-coverart images="{{ images }}"></spotify-coverart>
 
-    <audio id="audio" src="{{ audio }}"
+    <audio id="audio"
+      src="{{ audio }}"
       on-play="{{ onPlayChange }}"
       on-pause="{{ onPlayChange }}"
       on-timeupdate="{{ onPlayProgress }}">
