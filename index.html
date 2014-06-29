@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../spotify-progressbar/index.html">
+<link rel="import" href="../spotify-coverart/index.html">
 
 <polymer-element name="spotify-previewbutton" attributes="uri">
   <template>
@@ -15,9 +16,8 @@
         <spotify-progressbar value="{{ currentTime }}" max="{{ duration }}" on-change="{{ onProgressChanged }}"></spotify-progressbar>
       </div>
     </div>
-    <div class="cover">
-      <img src="{{ cover }}" on-load="{{ onImageLoaded }}"/>
-    </div>
+
+    <spotify-coverart images="{{ images }}"></spotify-coverart>
 
     <audio id="audio" src="{{ audio }}"
       on-play="{{ onPlayChange }}"
