@@ -4,7 +4,7 @@
   "description": "Polymer Web component to preview Spotify tracks",
   "dependencies": {
     "polymer": "~0.2.3",
-    "spotify-progressbar": "~0.0.1",
+    "spotify-progressbar": "~0.1.0",
     "spotify-coverart": "~0.0.1"
   },
   "authors": [

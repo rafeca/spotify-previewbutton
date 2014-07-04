@@ -42,13 +42,24 @@
     },
 
     onPlayProgress: function (e, detail, sender) {
-      this.currentTime = sender.currentTime;
-      this.duration = sender.duration;
+      if (!this.dragging) {
+        this.currentTime = sender.currentTime;
+        this.duration = sender.duration;
+      }
     },
 
     onProgressChanged: function (e, detail) {
       this.$.audio.currentTime = detail;
+    },
+
+    onProgressDrag: function () {
+      this.dragging = true;
+    },
+
+    onProgressDragEnd: function () {
+      this.dragging = false;
     }
+
   });
 
 })(window.Polymer);

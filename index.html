@@ -16,7 +16,10 @@
         <spotify-progressbar
           value="{{ currentTime }}"
           max="{{ duration }}"
-          on-change="{{ onProgressChanged }}">
+          on-change="{{ onProgressChanged }}"
+          on-dragstart="{{ onProgressDrag }}"
+          on-dragend="{{ onProgressDragEnd }}"
+          >
         </spotify-progressbar>
       </div>
     </div>
