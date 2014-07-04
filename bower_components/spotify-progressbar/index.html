@@ -4,7 +4,10 @@
   <template>
     <link rel="stylesheet" href="style.css"/>
 
-    <div class="progressbar" on-click="{{ onClick }}">
+    <div class="progressbar"
+      on-click="{{ onClick }}"
+      on-mouseDown="{{ onDragStart }}"
+      >
       <div class="bar" style="width: {{ value / max * 100 }}%;">
         <div class="slider">
         </div>

@@ -20,10 +20,11 @@
         this.playing = false;
         this.songTitle = data.name;
         this.author = data.artists[0].name;
-        this.cover = data.album.images[1].url;
+        this.images = JSON.stringify(data.album.images);
         this.audio = data.preview_url;
         this.currentTime = 0;
         this.duration = 30;
+        this.loading = false;
       }.bind(this));
     },
 
@@ -41,17 +42,24 @@
     },
 
     onPlayProgress: function (e, detail, sender) {
-      this.currentTime = sender.currentTime;
-      this.duration = sender.duration;
-    },
-
-    onImageLoaded: function () {
-      this.loading = false;
+      if (!this.dragging) {
+        this.currentTime = sender.currentTime;
+        this.duration = sender.duration;
+      }
     },
 
     onProgressChanged: function (e, detail) {
       this.$.audio.currentTime = detail;
+    },
+
+    onProgressDrag: function () {
+      this.dragging = true;
+    },
+
+    onProgressDragEnd: function () {
+      this.dragging = false;
     }
+
   });
 
 })(window.Polymer);

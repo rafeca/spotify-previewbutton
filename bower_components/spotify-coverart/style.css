@@ -1,0 +1,20 @@
+:host {
+  display: block;
+}
+
+.square-placeholder {
+  position: relative;
+  width: 100%;
+}
+
+.square-placeholder:after {
+  padding-top: 100%;
+  display: block;
+  content: '';
+}
+
+.image {
+  position: absolute;
+  top: 0; bottom: 0; right: 0; left: 0;
+  display: block;
+}

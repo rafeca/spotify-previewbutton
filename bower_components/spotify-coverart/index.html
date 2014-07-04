@@ -1,0 +1,12 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="spotify-coverart" attributes="images">
+  <template>
+    <link rel="stylesheet" href="style.css"/>
+    <div class="square-placeholder">
+      <div class="image" style="background-size: cover; background-image:url({{ cover }})" on-load="{{ onImageLoaded }}"></div>
+    </div>
+  </template>
+
+  <script type="text/javascript" src="main.js"></script>
+</polymer-element>
